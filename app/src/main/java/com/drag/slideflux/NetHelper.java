@@ -2,7 +2,7 @@ package com.drag.slideflux;
 
 import java.io.IOException;
 
-public class netHelper {
+public class NetHelper {
     public static final String SERVER = "http://www.google.com";
 
     public static String request (String str) throws IOException {
