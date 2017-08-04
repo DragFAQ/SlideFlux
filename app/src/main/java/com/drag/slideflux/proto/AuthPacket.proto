@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "com.drag.slideflux";
+option java_outer_classname = "AuthPacketProtos";
+
+// descriptor.proto must be optimized for speed because reflection-based
+// algorithms don't work during bootstrapping.
+option optimize_for = SPEED;
+
+message AuthPacket {
+    required string name = 1;    
+}

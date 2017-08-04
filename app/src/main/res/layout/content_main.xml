@@ -9,47 +9,59 @@
     tools:showIn="@layout/app_bar_main">
 
 
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_text" />
 
     <TextView
         android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/to_join_help"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:id="@+id/etQRCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/qr_code"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:onClick="connectToPresentation"
         android:text="@string/connect"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etQRCode"
-        app:layout_constraintLeft_toRightOf="@+id/etQRCode" />
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/etQRCode"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="78dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
         android:onClick="scanQR"
         android:text="@string/scan_qr"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQRCode" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/etQRCode"
+        app:layout_constraintLeft_toRightOf="@+id/etQRCode" />
 
 </android.support.constraint.ConstraintLayout>
